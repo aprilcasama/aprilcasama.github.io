@@ -897,6 +897,41 @@
       .proof-grid { grid-template-columns: 1fr; }
     }
 
+        .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .tools-group {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 16px 18px;
+    }
+
+    .tools-group-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 10px;
+    }
+
+    .tools-group .tools-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .tools-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .tools-grid { grid-template-columns: 1fr; }
+    }
+
         /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-grid,
@@ -1285,27 +1320,64 @@
       </div>
     </div>
 
-    <p style="font-size:0.82rem; color:rgba(255,255,255,0.4); margin-bottom:20px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600;">Tools I work in daily</p>
-    <div class="tools-row">
-      <span class="tool-tag">Loxo ATS</span>
-      <span class="tool-tag">Canva</span>
-      <span class="tool-tag">Google Forms</span>
-      <span class="tool-tag">Google Sheets</span>
-      <span class="tool-tag">Google Docs</span>
-      <span class="tool-tag">Google Drive</span>
-      <span class="tool-tag">Google Calendar</span>
-      <span class="tool-tag">Gmail</span>
-      <span class="tool-tag">Google Gemini</span>
-      <span class="tool-tag">QuickBooks Online</span>
-      <span class="tool-tag">Square</span>
-      <span class="tool-tag">Squarespace</span>
-      <span class="tool-tag">LinkedIn</span>
-      <span class="tool-tag">LinkedIn Sales Navigator</span>
-      <span class="tool-tag">Claude · Anthropic</span>
-      <span class="tool-tag">Microsoft Copilot</span>
-      <span class="tool-tag">WhatsApp</span>
-      <span class="tool-tag">Chrome DevTools</span>
-      <span class="tool-tag">GitHub</span>
+    <p style="font-size:0.82rem; color:rgba(255,255,255,0.4); margin-bottom:24px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600;">Tools I work in daily</p>
+    <div class="tools-grid">
+
+      <div class="tools-group">
+        <p class="tools-group-label">Google Workspace</p>
+        <div class="tools-row">
+          <span class="tool-tag">Gmail</span>
+          <span class="tool-tag">Google Drive</span>
+          <span class="tool-tag">Google Docs</span>
+          <span class="tool-tag">Google Sheets</span>
+          <span class="tool-tag">Google Forms</span>
+          <span class="tool-tag">Google Calendar</span>
+        </div>
+      </div>
+
+      <div class="tools-group">
+        <p class="tools-group-label">AI & Automation</p>
+        <div class="tools-row">
+          <span class="tool-tag">Claude · Anthropic</span>
+          <span class="tool-tag">Google Gemini</span>
+          <span class="tool-tag">Microsoft Copilot</span>
+        </div>
+      </div>
+
+      <div class="tools-group">
+        <p class="tools-group-label">Talent & Outreach</p>
+        <div class="tools-row">
+          <span class="tool-tag">Loxo ATS</span>
+          <span class="tool-tag">LinkedIn</span>
+          <span class="tool-tag">LinkedIn Sales Navigator</span>
+        </div>
+      </div>
+
+      <div class="tools-group">
+        <p class="tools-group-label">Finance & Admin</p>
+        <div class="tools-row">
+          <span class="tool-tag">QuickBooks Online</span>
+          <span class="tool-tag">Square</span>
+        </div>
+      </div>
+
+      <div class="tools-group">
+        <p class="tools-group-label">Web & Development</p>
+        <div class="tools-row">
+          <span class="tool-tag">Squarespace</span>
+          <span class="tool-tag">GitHub</span>
+          <span class="tool-tag">Chrome DevTools</span>
+        </div>
+      </div>
+
+      <div class="tools-group">
+        <p class="tools-group-label">Design & Communication</p>
+        <div class="tools-row">
+          <span class="tool-tag">Canva</span>
+          <span class="tool-tag">WhatsApp</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
