@@ -266,7 +266,7 @@
     }
 
     .service-card {
-      padding: 36px 28px;
+      padding: 30px 26px;
       border: 1px solid rgba(62,76,99,0.12);
       background: var(--bone);
       transition: border-color 0.2s, transform 0.2s;
@@ -278,29 +278,24 @@
     }
 
     .service-icon {
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       background: var(--slate);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       color: var(--brass);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .service-name {
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 0;
       color: var(--ink);
-    }
-
-    .service-desc {
-      font-size: 0.88rem;
-      color: var(--mid);
-      line-height: 1.7;
+      line-height: 1.35;
     }
 
     /* ─── PAGE 3: MY WORK ─── */
@@ -311,75 +306,6 @@
 
     #my-work .section-title { color: var(--white); }
     #my-work .section-intro { color: rgba(255,255,255,0.65); }
-
-    .work-headline {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 56px;
-    }
-
-    .work-logo {
-      background: var(--brass);
-      color: var(--white);
-      font-family: 'Playfair Display', serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      padding: 8px 14px;
-      text-transform: uppercase;
-    }
-
-    .work-org {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.6);
-    }
-
-    .work-org strong {
-      color: var(--white);
-      display: block;
-      font-size: 1rem;
-    }
-
-    .wins-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 48px;
-    }
-
-    .win-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 32px 24px;
-      transition: background 0.2s;
-    }
-
-    .win-card:hover { background: rgba(255,255,255,0.1); }
-
-    .win-stat {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--brass);
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .win-label {
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 10px;
-    }
-
-    .win-desc {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.6;
-    }
 
     .tools-row {
       display: flex;
@@ -1102,7 +1028,6 @@
       .linkedin-win-charts { grid-template-columns: 1fr; }
       .hero-photo-wrap { max-width: 340px; margin: 0 auto; }
       .services-grid,
-      .wins-grid { grid-template-columns: 1fr; }
       nav { padding: 0 20px; }
       .nav-links { gap: 16px; }
       section { padding: 100px 20px 60px; }
@@ -1261,33 +1186,43 @@
     <div class="services-grid">
       <div class="service-card anim anim-delay-1">
         <div class="service-icon">⚙️</div>
-        <p class="service-name">Workflow Design &amp; Automation</p>
-        <p class="service-desc">Map, redesign, and partially automate recurring ops processes — from intake pipelines to candidate onboarding — so the team does more with less manual effort.</p>
+        <p class="service-name">Workflow Design &amp; Improvement</p>
       </div>
       <div class="service-card anim anim-delay-2">
+        <div class="service-icon">🗂️</div>
+        <p class="service-name">Administrative Operations</p>
+      </div>
+      <div class="service-card anim anim-delay-3">
         <div class="service-icon">📋</div>
         <p class="service-name">ATS &amp; CRM Management</p>
-        <p class="service-desc">Clean, structured talent pipelines in tools like Loxo. Organized tagging, profile hygiene, and search logic so the right candidates surface instantly when clients need them.</p>
+      </div>
+      <div class="service-card anim anim-delay-4">
+        <div class="service-icon">📥</div>
+        <p class="service-name">Multiple Mailbox Management</p>
+      </div>
+      <div class="service-card anim anim-delay-5">
+        <div class="service-icon">💬</div>
+        <p class="service-name">Reliable Founder Communications</p>
+      </div>
+      <div class="service-card anim anim-delay-6">
+        <div class="service-icon">🤖</div>
+        <p class="service-name">AI Integration &amp; Automation</p>
+      </div>
+      <div class="service-card anim anim-delay-1">
+        <div class="service-icon">👥</div>
+        <p class="service-name">HR &amp; Payroll Administration</p>
+      </div>
+      <div class="service-card anim anim-delay-2">
+        <div class="service-icon">📊</div>
+        <p class="service-name">Bookkeeping &amp; Finance Ops</p>
       </div>
       <div class="service-card anim anim-delay-3">
         <div class="service-icon">🎨</div>
-        <p class="service-name">Client-Facing Asset Production</p>
-        <p class="service-desc">Scalable systems for producing polished deliverables — profile cards, presentations, reports — using Canva automation to cut production time without cutting quality.</p>
+        <p class="service-name">Graphic Design</p>
       </div>
       <div class="service-card anim anim-delay-4">
-        <div class="service-icon">💬</div>
-        <p class="service-name">Founder Communications</p>
-        <p class="service-desc">Clear, professional communication on behalf of the founder: inbox triage, candidate correspondence, client updates — handled with discretion and consistent voice.</p>
-      </div>
-      <div class="service-card anim anim-delay-5">
-        <div class="service-icon">📊</div>
-        <p class="service-name">Bookkeeping &amp; Finance Ops</p>
-        <p class="service-desc">QuickBooks Online certified. Maintain clean financial records, attachment management, and reporting — so the founder stays compliant and informed without diving into ledgers.</p>
-      </div>
-      <div class="service-card anim anim-delay-6">
         <div class="service-icon">🏗️</div>
-        <p class="service-name">Systems That Scale</p>
-        <p class="service-desc">Propose, document, and implement SOPs that survive growth. From Google Forms to Loxo integrations, the goal is always: one reliable source of truth, zero redundancy.</p>
+        <p class="service-name">Building SOPs For Long-term Growth</p>
       </div>
     </div>
   </div>
@@ -1299,46 +1234,6 @@
     <p class="section-label anim">Portfolio</p>
     <h2 class="section-title anim">Results inside<br/>a real operation</h2>
 
-    <div class="work-headline anim">
-      <div class="work-logo">Client</div>
-      <div class="work-org">
-        <strong>Kooking LLC</strong>
-        Boutique culinary concierge agency · Private chef placement · US market
-      </div>
-    </div>
-
-<div class="wins-grid">
-      <div class="win-card anim anim-delay-1">
-        <p class="win-stat">📥</p>
-        <p class="win-label">Founder's Inbox — Owned</p>
-        <p class="win-desc">Manage all email operations and administrative workflows via Google Workspace, ensuring nothing falls through the cracks and the founder's attention stays on what matters.</p>
-      </div>
-      <div class="win-card anim anim-delay-2">
-        <p class="win-stat">🎯</p>
-        <p class="win-label">Lead Generation & Outreach</p>
-        <p class="win-desc">Generate targeted leads via LinkedIn Sales Navigator, send InMails to prospects with buyer intent signals, and coordinate introductory calls directly for the founder.</p>
-      </div>
-      <div class="win-card anim anim-delay-3">
-        <p class="win-stat">↓50%</p>
-        <p class="win-label">Time Saved per Chef Profile</p>
-        <p class="win-desc">Canva-based automation pipeline reduced profile card production from 20–30 mins to just 10–15 mins per card — up to 50% faster. This freed April to focus on higher-priority operational tasks, and freed the founder from hours of manual card creation she used to do herself — time she now puts toward client communications and facilitating chef trials.</p>
-      </div>
-      <div class="win-card anim anim-delay-4">
-        <p class="win-stat">💼</p>
-        <p class="win-label">Payroll & Contractor Onboarding</p>
-        <p class="win-desc">Manage end-to-end contractor and client onboarding in Gusto, maintaining strict data integrity and overseeing accurate, timely payroll processing for all contractors.</p>
-      </div>
-      <div class="win-card anim anim-delay-5">
-        <p class="win-stat">📊</p>
-        <p class="win-label">Financial Admin — Audit-Ready</p>
-        <p class="win-desc">Oversee operational invoicing via Square and financial integration with QuickBooks Online — maintaining clean, audit-ready records so the founder never worries about the books.</p>
-      </div>
-      <div class="win-card anim anim-delay-6">
-        <p class="win-stat">⚙️</p>
-        <p class="win-label">Systems & Site Operations</p>
-        <p class="win-desc">Manage the website end-to-end via Squarespace — updating links, injecting custom JavaScript for third-party integrations (e.g. AudioEye), and editing HTML for compliance and operational changes. Changes are executed cleanly without disrupting the live frontend experience.</p>
-      </div>
-    </div>
 
     <div class="client-roster anim anim-delay-1">
       <p class="roster-label">Clients</p>
@@ -1534,12 +1429,7 @@
 <section id="credentials">
   <div class="container">
     <p class="section-label anim">Credentials</p>
-    <h2 class="section-title anim">20 years of making<br/>organisations work</h2>
-    <p class="section-intro anim anim-delay-1">
-      Most ops specialists have either worked in institutions or with founders — rarely both. I've done both, and the
-      crossover is exactly what makes me useful: I bring institutional-grade accuracy and discipline to the speed and
-      ambiguity of a founder's world.
-    </p>
+    <h2 class="section-title anim">20+ years of making<br/>organisations work</h2>
 
     <a href="april-casama-resume.pdf" target="_blank" rel="noopener" class="cv-cta anim anim-delay-1">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
