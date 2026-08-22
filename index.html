@@ -328,91 +328,21 @@
       background: var(--bone);
     }
 
-    .certs-panel {
-      background: var(--white);
-      padding: 40px 44px;
-      border: 1px solid rgba(62,76,99,0.12);
-      column-count: 2;
-      column-gap: 56px;
-    }
 
-    .certs-panel > * { break-inside: avoid; }
 
-    .certs-title { column-span: all; }
 
     @media (max-width: 780px) {
-      .certs-panel { column-count: 1; padding: 32px 26px; }
     }
 
-    .certs-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 28px;
-      color: var(--ink);
-    }
 
-    .cert-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(62,76,99,0.08);
-    }
 
-    .cert-item:last-child { border-bottom: none; }
 
-    .cert-badge {
-      width: 36px;
-      height: 36px;
-      background: var(--light-slate);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--slate);
-      font-size: 1rem;
-    }
 
-    .cert-name {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 2px;
-    }
 
-    .certs-subtitle {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--brass);
-      margin: 16px 0 8px;
-    }
 
-    .cert-ai {
-      background: var(--slate) !important;
-      color: var(--brass) !important;
-      font-size: 0.85rem !important;
-    }
 
-    .cert-link {
-      display: inline-block;
-      margin-left: 8px;
-      font-size: 0.72rem;
-      color: var(--brass);
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      transition: opacity 0.2s;
-    }
 
-    .cert-link:hover { opacity: 0.7; }
 
-    .cert-body {
-      font-size: 0.8rem;
-      color: var(--mid);
-    }
 
     /* ─── PAGE 5: CONNECT ─── */
     #connect {
@@ -1023,104 +953,96 @@
 
     /* ═══ CAROUSEL ═══ */
     .carousel { margin: 0 0 40px; }
-
     .car-window {
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(0,0,0,0.22);
     }
-    .car-light .car-window {
-      border-color: rgba(62,76,99,0.14);
-      background: var(--bone);
-    }
-
-    .car-track {
-      display: flex;
-      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
-      will-change: transform;
-    }
-
+    .car-light .car-window { border-color: rgba(62,76,99,0.14); background: var(--bone); }
+    .car-track { display: flex; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); will-change: transform; }
     .car-slide {
       flex: 0 0 100%;
       margin: 0;
       padding: 22px 24px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+      box-sizing: border-box;
     }
-
     .car-slide img {
-      max-width: 100%;
-      max-height: 440px;
-      width: auto;
-      object-fit: contain;
-      display: block;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: #fff;
+      max-width: 100%; max-height: 430px; width: auto;
+      object-fit: contain; display: block;
+      border: 1px solid rgba(255,255,255,0.08); background: #fff;
     }
     .car-light .car-slide img { border-color: rgba(62,76,99,0.12); }
-
-    .car-slide figcaption {
-      text-align: center;
-      max-width: 640px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
+    .car-slide figcaption { text-align: center; max-width: 640px; display: flex; flex-direction: column; gap: 5px; }
     .car-slide figcaption strong {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: 0.01em;
+      font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--white);
     }
     .car-light .car-slide figcaption strong { color: var(--ink); }
-    .car-slide figcaption span {
-      font-size: 0.82rem;
-      line-height: 1.65;
-      color: rgba(255,255,255,0.55);
-    }
+    .car-slide figcaption span { font-size: 0.82rem; line-height: 1.65; color: rgba(255,255,255,0.55); }
     .car-light .car-slide figcaption span { color: var(--mid); }
-
-    .car-controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      margin-top: 14px;
-    }
-
+    .car-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 14px; }
     .car-btn {
       width: 34px; height: 34px;
       border: 1px solid rgba(255,255,255,0.22);
-      background: none;
-      color: rgba(255,255,255,0.75);
-      font-size: 1.25rem;
-      line-height: 1;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      background: none; color: rgba(255,255,255,0.75);
+      font-size: 1.25rem; line-height: 1; cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
     }
     .car-btn:hover { border-color: var(--brass); color: var(--brass); }
     .car-light .car-btn { border-color: rgba(62,76,99,0.25); color: var(--slate); }
     .car-light .car-btn:hover { border-color: var(--brass); color: var(--brass); }
-
     .car-dots { display: flex; gap: 7px; }
     .car-dot {
-      width: 7px; height: 7px;
-      padding: 0;
-      border: none;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.25);
-      cursor: pointer;
+      width: 7px; height: 7px; padding: 0; border: none; border-radius: 50%;
+      background: rgba(255,255,255,0.25); cursor: pointer;
       transition: background 0.2s, transform 0.2s;
     }
     .car-light .car-dot { background: rgba(62,76,99,0.25); }
     .car-dot.on { background: var(--brass); transform: scale(1.35); }
 
+    /* ═══ CERTIFICATIONS ═══ */
+    .certs-panel {
+      background: var(--white);
+      padding: 26px 28px 20px;
+      border: 1px solid rgba(62,76,99,0.12);
+    }
+    .certs-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.18rem; font-weight: 600; color: var(--ink);
+      margin-bottom: 16px;
+      display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    }
+    .certs-count {
+      font-family: 'Inter', sans-serif; font-size: 0.66rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass);
+    }
+    .certs-panel .carousel { margin: 0; }
+    .certs-panel .car-window { background: transparent; border: none; }
+    .certs-panel .car-controls { margin-top: 12px; }
+    .cert-slide { padding: 0; align-items: stretch; gap: 11px; }
+    .cert-slide-label {
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--brass);
+    }
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
+    .cert-tile {
+      position: relative; display: flex; flex-direction: column; gap: 2px;
+      text-decoration: none; background: var(--bone);
+      border: 1px solid rgba(62,76,99,0.12); border-left: 2px solid var(--brass);
+      padding: 12px 28px 12px 14px;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .cert-tile:hover { background: #efe8da; border-color: var(--brass); transform: translateY(-2px); }
+    .cert-tile-name { font-size: 0.81rem; font-weight: 600; color: var(--ink); line-height: 1.35; }
+    .cert-tile-issuer { font-size: 0.71rem; color: var(--slate); font-weight: 500; }
+    .cert-tile-meta { font-size: 0.67rem; color: var(--mid); }
+    .cert-tile-arrow { position: absolute; top: 11px; right: 11px; font-size: 0.7rem; color: var(--brass); opacity: 0.6; }
+
     @media (max-width: 700px) {
       .car-slide { padding: 16px 14px; }
       .car-slide img { max-height: 300px; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .certs-panel { padding: 20px 16px 18px; }
     }
 
     /* RESPONSIVE */
@@ -1384,7 +1306,7 @@
         </div>
       </div>
       <div class="car-controls">
-        <button class="car-btn" data-dir="-1" aria-label="Previous">‹</button>
+        <button class="car-btn" data-dir="-1" aria-label="Previous">&lsaquo;</button>
         <div class="car-dots">
           <button class="car-dot" data-go="0" aria-label="Slide 1"></button>
           <button class="car-dot" data-go="1" aria-label="Slide 2"></button>
@@ -1393,7 +1315,7 @@
           <button class="car-dot" data-go="4" aria-label="Slide 5"></button>
           <button class="car-dot" data-go="5" aria-label="Slide 6"></button>
         </div>
-        <button class="car-btn" data-dir="1" aria-label="Next">›</button>
+        <button class="car-btn" data-dir="1" aria-label="Next">&rsaquo;</button>
       </div>
     </div>
 
@@ -1571,12 +1493,12 @@
         </div>
       </div>
       <div class="car-controls">
-        <button class="car-btn" data-dir="-1" aria-label="Previous">‹</button>
+        <button class="car-btn" data-dir="-1" aria-label="Previous">&lsaquo;</button>
         <div class="car-dots">
           <button class="car-dot" data-go="0" aria-label="Slide 1"></button>
           <button class="car-dot" data-go="1" aria-label="Slide 2"></button>
         </div>
-        <button class="car-btn" data-dir="1" aria-label="Next">›</button>
+        <button class="car-btn" data-dir="1" aria-label="Next">&rsaquo;</button>
       </div>
     </div>
 
@@ -1631,103 +1553,131 @@
         </div>
       </div>
       <div class="car-controls">
-        <button class="car-btn" data-dir="-1" aria-label="Previous">‹</button>
+        <button class="car-btn" data-dir="-1" aria-label="Previous">&lsaquo;</button>
         <div class="car-dots">
           <button class="car-dot" data-go="0" aria-label="Slide 1"></button>
           <button class="car-dot" data-go="1" aria-label="Slide 2"></button>
         </div>
-        <button class="car-btn" data-dir="1" aria-label="Next">›</button>
+        <button class="car-btn" data-dir="1" aria-label="Next">&rsaquo;</button>
       </div>
     </div>
 
 
-    <div class="certs-panel anim anim-delay-2">
-        <p class="certs-title">Certifications &amp; Training</p>
 
-        <p class="certs-subtitle">AI &amp; Technology</p>
-
-        <div class="cert-item">
-          <div class="cert-badge cert-ai">🤖</div>
-          <div>
-            <p class="cert-name">AI Mastery Certificate Program</p>
-            <p class="cert-body">Coursiv · 5 courses · 26 hours
-              <a href="https://app.coursiv.io/certificates/public/program/IVMQNRTT/en" target="_blank" rel="noopener" class="cert-link">View ↗</a>
-            </p>
+      <div class="certs-panel anim anim-delay-2">
+        <p class="certs-title">Certifications &amp; Training <span class="certs-count">13 credentials &middot; all verifiable</span></p>
+        <div class="carousel car-light" id="car-certs" data-count="4">
+          <div class="car-window">
+            <div class="car-track">
+          <div class="car-slide cert-slide" data-i="0">
+            <p class="cert-slide-label">AI &amp; Technology</p>
+            <div class="cert-grid">
+            <a class="cert-tile" href="https://app.coursiv.io/certificates/public/program/IVMQNRTT/en" target="_blank" rel="noopener">
+              <span class="cert-tile-name">AI Mastery Certificate Program</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">5 courses &middot; 26 hrs</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="https://certificates.coursiv.io/certificates/challenges/398ccebd-33b0-44e8-9243-224d218f6b80/AR4JKPTS/8229fe4cd88c.pdf" target="_blank" rel="noopener">
+              <span class="cert-tile-name">28-Day AI Certificate Program</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">28 days &middot; Aug 2026</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="https://certificates.coursiv.io/certificates/challenges/d8509fee-6ae2-4070-8f26-110e3137c03e/WMJ6PK5X/ca50ced0a45f.pdf" target="_blank" rel="noopener">
+              <span class="cert-tile-name">28-Day Claude Mastery Plan</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">28 days &middot; Aug 2026</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="https://app.coursiv.io/certificates/public/KMKL26LL/en" target="_blank" rel="noopener">
+              <span class="cert-tile-name">Claude: Deep Dive</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">13 lessons &middot; 5 hrs</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            </div>
           </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-badge cert-ai">⚡</div>
-          <div>
-            <p class="cert-name">Claude: Deep Dive</p>
-            <p class="cert-body">Coursiv · 13 lessons · 5 hours
-              <a href="https://app.coursiv.io/certificates/public/KMKL26LL/en" target="_blank" rel="noopener" class="cert-link">View ↗</a>
-            </p>
+          <div class="car-slide cert-slide" data-i="1">
+            <p class="cert-slide-label">AI &amp; Technology</p>
+            <div class="cert-grid">
+            <a class="cert-tile" href="https://app.coursiv.io/certificates/public/GEJ5Q5TV/en" target="_blank" rel="noopener">
+              <span class="cert-tile-name">Claude Certification</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">10 lessons &middot; 5 hrs</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="https://certificates.coursiv.io/certificates/challenges/fea97308-f416-4073-b10c-7a7e2d3d960f/RPIW4E5W/51353bb45872.pdf" target="_blank" rel="noopener">
+              <span class="cert-tile-name">7-Day Claude Beginner Challenge</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">7 days &middot; Jul 2026</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="https://app.coursiv.io/certificates/public/AQB7TMXC/en" target="_blank" rel="noopener">
+              <span class="cert-tile-name">Turbocharge Your Productivity with AI</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">9 lessons &middot; 3 hrs</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="https://app.coursiv.io/certificates/public/XJC4OG44/en" target="_blank" rel="noopener">
+              <span class="cert-tile-name">AI for Business Operations</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">8 lessons &middot; 3 hrs</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            </div>
           </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-badge cert-ai">✦</div>
-          <div>
-            <p class="cert-name">Claude Certification</p>
-            <p class="cert-body">Coursiv · 10 lessons · 5 hours
-              <a href="https://app.coursiv.io/certificates/public/GEJ5Q5TV/en" target="_blank" rel="noopener" class="cert-link">View ↗</a>
-            </p>
+          <div class="car-slide cert-slide" data-i="2">
+            <p class="cert-slide-label">AI &amp; Technology</p>
+            <div class="cert-grid">
+            <a class="cert-tile" href="https://certificates.coursiv.io/certificates/challenges/1a56efef-4575-80c1-818d-f6195e93dacd/QRBVF7H7/652a0aa8c4ca.pdf" target="_blank" rel="noopener">
+              <span class="cert-tile-name">No Code Challenge</span>
+              <span class="cert-tile-issuer">Coursiv</span>
+              <span class="cert-tile-meta">14 days &middot; Aug 2026</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            </div>
           </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-badge cert-ai">🏢</div>
-          <div>
-            <p class="cert-name">AI for Business Operations</p>
-            <p class="cert-body">Coursiv · 8 lessons · 3 hours
-              <a href="https://app.coursiv.io/certificates/public/XJC4OG44/en" target="_blank" rel="noopener" class="cert-link">View ↗</a>
-            </p>
+          <div class="car-slide cert-slide" data-i="3">
+            <p class="cert-slide-label">Finance &amp; Operations</p>
+            <div class="cert-grid">
+            <a class="cert-tile" href="https://credsverse.com/credentials/cdb2a71a-89bd-479c-9b08-a841023ef4af?preview=1" target="_blank" rel="noopener">
+              <span class="cert-tile-name">US Online Accounting &amp; Bookkeeping</span>
+              <span class="cert-tile-issuer">MAB Online Academy</span>
+              <span class="cert-tile-meta">40 hrs &middot; QBO &amp; Xero</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="https://www.credly.com/badges/77c5f543-6020-4040-8efe-355512eceace/linked_in_profile" target="_blank" rel="noopener">
+              <span class="cert-tile-name">Intuit Bookkeeping Certification</span>
+              <span class="cert-tile-issuer">Intuit</span>
+              <span class="cert-tile-meta">Verified &middot; Credly</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="https://www.credly.com/badges/089d86ec-34fa-4b85-a437-555ce96b57db/linked_in_profile" target="_blank" rel="noopener">
+              <span class="cert-tile-name">Intuit QuickBooks Level 1</span>
+              <span class="cert-tile-issuer">Intuit</span>
+              <span class="cert-tile-meta">Verified &middot; Credly</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            <a class="cert-tile" href="#" data-cert="vacap">
+              <span class="cert-tile-name">REVA Mentorship Program</span>
+              <span class="cert-tile-issuer">The VA Capital</span>
+              <span class="cert-tile-meta">10 days &middot; Jul 2026</span>
+              <span class="cert-tile-arrow">&#8599;</span>
+            </a>
+            </div>
           </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-badge cert-ai">🎯</div>
-          <div>
-            <p class="cert-name">7-Day Claude Beginner Challenge</p>
-            <p class="cert-body">Coursiv · Issued July 15, 2026
-              <a href="https://certificates.coursiv.io/certificates/challenges/fea97308-f416-4073-b10c-7a7e2d3d960f/RPIW4E5W/51353bb45872.pdf" target="_blank" rel="noopener" class="cert-link">View ↗</a>
-            </p>
+            </div>
           </div>
-        </div>
-
-        <p class="certs-subtitle" style="margin-top:20px;">Finance &amp; Operations</p>
-
-        <div class="cert-item">
-          <div class="cert-badge">🧾</div>
-          <div>
-            <p class="cert-name">US Online Accounting &amp; Bookkeeping Course</p>
-            <p class="cert-body">MAB Online Academy · 40 hours · Dec 2025 · QBO &amp; Xero
-              <a href="https://credsverse.com/credentials/cdb2a71a-89bd-479c-9b08-a841023ef4af?preview=1" target="_blank" rel="noopener" class="cert-link">View ↗</a>
-            </p>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-badge">📘</div>
-          <div>
-            <p class="cert-name">Intuit Bookkeeping Certification</p>
-            <p class="cert-body">Intuit · Verified by Credly
-              <a href="https://www.credly.com/badges/77c5f543-6020-4040-8efe-355512eceace/linked_in_profile" target="_blank" rel="noopener" class="cert-link">View ↗</a>
-            </p>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-badge">📗</div>
-          <div>
-            <p class="cert-name">Intuit QuickBooks Certification Level 1</p>
-            <p class="cert-body">Intuit · Verified by Credly
-              <a href="https://www.credly.com/badges/089d86ec-34fa-4b85-a437-555ce96b57db/linked_in_profile" target="_blank" rel="noopener" class="cert-link">View ↗</a>
-            </p>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-badge">📞</div>
-          <div>
-            <p class="cert-name">REVA Mentorship Program</p>
-            <p class="cert-body">The VA Capital &middot; 10 days &middot; July 2026
-              <a href="#" class="cert-link" data-cert="vacap">View ↗</a>
-            </p>
+          <div class="car-controls">
+            <button class="car-btn" data-dir="-1" aria-label="Previous">&lsaquo;</button>
+            <div class="car-dots">
+          <button class="car-dot" data-go="0" aria-label="Slide 1"></button>
+          <button class="car-dot" data-go="1" aria-label="Slide 2"></button>
+          <button class="car-dot" data-go="2" aria-label="Slide 3"></button>
+          <button class="car-dot" data-go="3" aria-label="Slide 4"></button>
+            </div>
+            <button class="car-btn" data-dir="1" aria-label="Next">&rsaquo;</button>
           </div>
         </div>
       </div>
@@ -1872,30 +1822,25 @@
     var dots  = Array.prototype.slice.call(car.querySelectorAll('.car-dot'));
     var count = parseInt(car.dataset.count, 10);
     var idx = 0;
-
     function show(n) {
       idx = (n + count) % count;
       track.style.transform = 'translateX(' + (-idx * 100) + '%)';
       dots.forEach(function (d, i) { d.classList.toggle('on', i === idx); });
     }
-
     car.querySelectorAll('.car-btn').forEach(function (b) {
       b.addEventListener('click', function () { show(idx + parseInt(b.dataset.dir, 10)); });
     });
     dots.forEach(function (d) {
       d.addEventListener('click', function () { show(parseInt(d.dataset.go, 10)); });
     });
-
-    // swipe
     var x0 = null;
-    car.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, {passive: true});
+    car.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, {passive:true});
     car.addEventListener('touchend', function (e) {
       if (x0 === null) return;
       var dx = e.changedTouches[0].clientX - x0;
       if (Math.abs(dx) > 45) show(idx + (dx < 0 ? 1 : -1));
       x0 = null;
-    }, {passive: true});
-
+    }, {passive:true});
     show(0);
   });
 </script>
