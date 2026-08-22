@@ -941,15 +941,6 @@
       margin-right: 12px;
     }
 
-    /* placeholder until a real link is set */
-    .cv-cta[data-audio-placeholder] {
-      opacity: 0.55;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
-    .cv-cta[data-audio-placeholder] .cv-cta-meta::after {
-      content: " · coming soon";
-    }
 
     /* ═══ CAROUSEL ═══ */
     .carousel { margin: 0 0 40px; }
@@ -1044,6 +1035,28 @@
       .cert-grid { grid-template-columns: 1fr; }
       .certs-panel { padding: 20px 16px 18px; }
     }
+
+    .audio-block { display: inline-block; vertical-align: top; }
+
+    .audio-toggle {
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      background: none;
+    }
+    .audio-toggle[aria-expanded="true"] {
+      background: var(--slate);
+      color: var(--white);
+    }
+
+    .audio-player {
+      margin: 4px 12px 12px 0;
+      padding: 12px 14px;
+      background: var(--white);
+      border: 1px solid rgba(62,76,99,0.14);
+      border-left: 2px solid var(--brass);
+      max-width: 380px;
+    }
+    .audio-player audio { width: 100%; display: block; height: 36px; }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -1527,11 +1540,21 @@
       <span class="cv-cta-meta">PDF</span>
     </a>
 
-    <a href="#" class="cv-cta anim anim-delay-2" data-audio-placeholder>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 12h2"/><path d="M6 8v8"/><path d="M10 4v16"/><path d="M14 7v10"/><path d="M18 10v4"/><path d="M22 12h-2"/></svg>
-      Audio Introduction
-      <span class="cv-cta-meta">Listen</span>
-    </a>
+    <div class="audio-block anim anim-delay-2">
+      <button class="cv-cta audio-toggle" id="audio-toggle" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 12h2"/><path d="M6 8v8"/><path d="M10 4v16"/><path d="M14 7v10"/><path d="M18 10v4"/><path d="M22 12h-2"/></svg>
+        Audio Introduction
+        <span class="cv-cta-meta">1:50</span>
+      </button>
+      <div class="audio-player" id="audio-player" hidden>
+        <audio controls preload="none" id="audio-el">
+          <source src="april-casama-audio-introduction.m4a" type="audio/mp4">
+          <source src="april-casama-audio-introduction.mp3" type="audio/mpeg">
+          Your browser does not support audio playback.
+          <a href="april-casama-audio-introduction.mp3">Download the recording</a>.
+        </audio>
+      </div>
+    </div>
 
     <a href="april-casama-employment-letters.pdf" target="_blank" rel="noopener" class="cv-cta anim anim-delay-3">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 7-10 6L2 7"/></svg>
@@ -1843,6 +1866,20 @@
     }, {passive:true});
     show(0);
   });
+</script>
+
+<script>
+  (function () {
+    var btn = document.getElementById('audio-toggle');
+    var box = document.getElementById('audio-player');
+    var el  = document.getElementById('audio-el');
+    if (!btn || !box) return;
+    btn.addEventListener('click', function () {
+      var open = box.hasAttribute('hidden');
+      if (open) { box.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); el.play(); }
+      else { box.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); el.pause(); }
+    });
+  })();
 </script>
 </body>
 </html>
