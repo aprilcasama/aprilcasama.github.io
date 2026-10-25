@@ -252,6 +252,18 @@
       gap: 32px;
     }
 
+    /* SERVICES (outcome cards) */
+    .svc-grid { gap: 24px; }
+    .svc-card { padding: 28px 26px 26px; background: var(--bone); border: 1px solid rgba(62,76,99,0.12); border-top: 2px solid var(--brass); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.08); }
+    .svc-top { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+    .svc-num { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: var(--brass); }
+    .svc-area { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); }
+    .svc-head { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; line-height: 1.3; color: var(--ink); margin-bottom: 10px; }
+    .svc-desc { font-size: 0.9rem; line-height: 1.7; color: var(--mid); margin-bottom: 16px; }
+    .svc-inc { list-style: none; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(62,76,99,0.12); }
+    .svc-inc li { font-size: 0.78rem; color: var(--ink); line-height: 1.5; padding: 3px 0 3px 14px; position: relative; }
+    .svc-inc li::before { content: ""; position: absolute; left: 0; top: 0.75em; width: 5px; height: 5px; background: var(--brass); }
     .service-card {
       padding: 30px 26px;
       border: 1px solid rgba(62,76,99,0.12);
@@ -1232,7 +1244,7 @@
         <p class="hero-title">The person behind the scenes who makes founders fly.</p>
         <p class="hero-tagline">I help founders <em>run lean</em> — so they can lead.</p>
         <p class="hero-offer">I take over the daily operations of your business &mdash; working as your <strong>Executive Assistant</strong>, <strong>Administrative Assistant</strong>, <strong>HR Assistant</strong> or <strong>Bookkeeping Assistant</strong>.</p>
-        <p class="hero-for">Built for founders running teams of 5&ndash;30</p>
+        <p class="hero-for">Built for boutique service businesses &amp; founders with teams of 5&ndash;30</p>
         <p class="hero-sub">
           20 years across corporate banking, global BPO, and boutique advisory — now channeled into one discipline: making sure the people who build things never have to worry about how those things run.
         </p>
@@ -1263,57 +1275,69 @@
     <p class="section-label anim">What I Do</p>
     <h2 class="section-title anim">Operations that protect<br/>founder bandwidth</h2>
     <p class="section-intro anim anim-delay-1">
-      Every hour a founder spends on logistics, onboarding friction, or disorganized pipelines is an hour not spent growing. I build the systems and processes that quietly absorb that burden.
+      Every hour a founder spends on logistics, onboarding friction, or disorganized pipelines is an hour not spent growing. I build the systems and processes that quietly absorb that burden. Remote operations and administrative support for boutique service businesses and founders running teams of 5&ndash;30.
     </p>
 
-    <div class="services-grid">
-      <div class="service-card anim anim-delay-1">
-        <div class="service-icon">⚙️</div>
-        <p class="service-name">Workflow Design &amp; Optimization</p>
+    <div class="services-grid svc-grid">
+      <div class="svc-card anim anim-delay-1">
+        <div class="svc-top"><span class="svc-num">01</span><span class="svc-area">Inbox, Calendar &amp; Executive Support</span></div>
+        <h3 class="svc-head">Your inbox and calendar, under control.</h3>
+        <p class="svc-desc">Calendars, inboxes and priority communications managed across time zones, protecting your decision-making bandwidth.</p>
+        <ul class="svc-inc">
+          <li>Executive &amp; Administrative Support</li>
+          <li>Multi-Regional Coordination</li>
+          <li>Multiple Mailbox Management</li>
+        </ul>
       </div>
-      <div class="service-card anim anim-delay-2">
-        <div class="service-icon">🗂️</div>
-        <p class="service-name">Administrative Operations</p>
+      <div class="svc-card anim anim-delay-2">
+        <div class="svc-top"><span class="svc-num">02</span><span class="svc-area">Daily Operations &amp; SOPs</span></div>
+        <h3 class="svc-head">Operations that run without you.</h3>
+        <p class="svc-desc">Scalable workflows, SOPs and process maps that cut friction for small, high-trust teams and keep the business moving when you step away.</p>
+        <ul class="svc-inc">
+          <li>Operational Workflow Design &amp; Optimization</li>
+          <li>SOP &amp; Process Documentation for Long-term Growth</li>
+          <li>Administrative Operations</li>
+        </ul>
       </div>
-      <div class="service-card anim anim-delay-3">
-        <div class="service-icon">📋</div>
-        <p class="service-name">ATS &amp; CRM Management</p>
+      <div class="svc-card anim anim-delay-3">
+        <div class="svc-top"><span class="svc-num">03</span><span class="svc-area">Books &amp; Finance</span></div>
+        <h3 class="svc-head">Books you can trust.</h3>
+        <p class="svc-desc">AR tracking and bank reconciliation in QuickBooks Online and Google Sheets, kept audit-ready.</p>
+        <ul class="svc-inc">
+          <li>Bookkeeping &amp; Finance Ops</li>
+          <li>Financial Tracking &amp; Reconciliation</li>
+        </ul>
       </div>
-      <div class="service-card anim anim-delay-4">
-        <div class="service-icon">📥</div>
-        <p class="service-name">Multiple Mailbox Management</p>
+      <div class="svc-card anim anim-delay-1">
+        <div class="svc-top"><span class="svc-num">04</span><span class="svc-area">HR, Payroll &amp; Recruitment</span></div>
+        <h3 class="svc-head">People and recruitment, handled.</h3>
+        <p class="svc-desc">Contractor onboarding, payroll and candidate pipelines tracked from application to placement in Gusto and Loxo ATS.</p>
+        <ul class="svc-inc">
+          <li>HR &amp; Payroll Administration</li>
+          <li>HCM &amp; Candidate Tracking</li>
+          <li>ATS &amp; CRM Management</li>
+        </ul>
       </div>
-      <div class="service-card anim anim-delay-5">
-        <div class="service-icon">💬</div>
-        <p class="service-name">Executive &amp; Founder Support with Multi-Regional Coordination</p>
+      <div class="svc-card anim anim-delay-2">
+        <div class="svc-top"><span class="svc-num">05</span><span class="svc-area">AI, Automation &amp; Systems</span></div>
+        <h3 class="svc-head">Less manual work, more automation.</h3>
+        <p class="svc-desc">AI, automation and interactive tools, including a global talent map built on the Google Maps API, wired into the SaaS stack you already pay for.</p>
+        <ul class="svc-inc">
+          <li>AI Integration &amp; Automation</li>
+          <li>SaaS Stack Management &amp; Integration</li>
+          <li>Data Visualization &amp; Systems Integration</li>
+        </ul>
       </div>
-      <div class="service-card anim anim-delay-6">
-        <div class="service-icon">🤖</div>
-        <p class="service-name">AI Integration &amp; Automation</p>
-      </div>
-      <div class="service-card anim anim-delay-3">
-        <div class="service-icon">🧩</div>
-        <p class="service-name">SaaS Stack Management &amp; Integration</p>
-      </div>
-      <div class="service-card anim anim-delay-1">
-        <div class="service-icon">👥</div>
-        <p class="service-name">HR &amp; Payroll Administration</p>
-      </div>
-      <div class="service-card anim anim-delay-2">
-        <div class="service-icon">📊</div>
-        <p class="service-name">Bookkeeping &amp; Finance Ops</p>
-      </div>
-      <div class="service-card anim anim-delay-3">
-        <div class="service-icon">🎨</div>
-        <p class="service-name">Graphic Design</p>
-      </div>
-      <div class="service-card anim anim-delay-5">
-        <div class="service-icon">📞</div>
-        <p class="service-name">Appointment Setting &amp; Cold Calling</p>
-      </div>
-      <div class="service-card anim anim-delay-4">
-        <div class="service-icon">🏗️</div>
-        <p class="service-name">Building SOPs For Long-term Growth</p>
+      <div class="svc-card anim anim-delay-3">
+        <div class="svc-top"><span class="svc-num">06</span><span class="svc-area">Outreach &amp; Creative</span></div>
+        <h3 class="svc-head">Outreach and polish, done for you.</h3>
+        <p class="svc-desc">Qualified prospects sourced through LinkedIn Sales Navigator, professional outreach, and polished Canva candidate profiles that look the part.</p>
+        <ul class="svc-inc">
+          <li>Lead Sourcing &amp; Outreach</li>
+          <li>Appointment Setting &amp; Cold Calling</li>
+          <li>Candidate Presentation Design</li>
+          <li>Graphic Design</li>
+        </ul>
       </div>
     </div>
   </div>
